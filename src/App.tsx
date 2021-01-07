@@ -1,3 +1,9 @@
+import { HomeScreen } from './screens/Home/HomeScreen';
+
 export const App = () => {
-  return <h1>Space</h1>;
+  return (
+    <>
+      <HomeScreen />
+    </>
+  );
 };
