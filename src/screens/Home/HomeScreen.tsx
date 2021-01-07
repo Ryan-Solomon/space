@@ -26,14 +26,23 @@ export const HomeScreen = () => {
     getNasaImgOfDay();
   }, []);
 
-  console.log(photoObj);
   if (status === 'PENDING') return <h1>Getting an awesome photo from NASA</h1>;
   if (status === 'REJECTED' || !photoObj) return <h1>Something went wrong</h1>;
 
   const { date, explanation, hdurl, title } = photoObj;
 
   return (
-    <div style={{ backgroundImage: `url(${hdurl})` }} className='home-screen'>
+    <div
+      style={{
+        background: `linear-gradient(
+      rgba(0, 0, 0, 0.556), 
+      rgba(0, 0, 0, 0.59)
+    ),
+    
+    url(${hdurl}) center center / cover no-repeat`,
+      }}
+      className='home-screen'
+    >
       <h1>Home</h1>
     </div>
   );
